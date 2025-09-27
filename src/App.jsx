@@ -22,6 +22,31 @@ return (
 );
 }
 
+function App() {
+return (
+<Router>
+<div className="app">
+<nav>
+<div className="logo">YN</div>
+<span className="site-title">My Portfolio</span>
+<div className="nav-links">
+<Link to="/">Home</Link>
+<Link to="/about">About</Link>
+</div>
+</nav>
 
+
+<main>
+<Routes>
+<Route path="/" element={<Home />} />
+<Route path="/about" element={<About />} />
+</Routes>
+</main>
+
+<footer>© 2025 My Portfolio</footer>
+</div>
+</Router>
+);
+}
 
 export default App
