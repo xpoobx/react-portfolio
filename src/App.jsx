@@ -92,19 +92,31 @@ return (
 
 
 function Contact() {
-return (
-<div className="contact">
-<h1>Contact Me</h1>
-<form action="/">
-<input type="text" placeholder="First Name" />
-<input type="text" placeholder="Last Name" />
-<input type="tel" placeholder="Contact Number" />
-<input type="email" placeholder="Email Address" />
-<textarea placeholder="Message"></textarea>
-<button type="submit">Send</button>
-</form>
-</div>
-);
+  return (
+    <div className="contact">
+      <div className="contact-panel">
+        <h1>Contact Me</h1>
+
+        <div className="contact-info">
+          <p>Email: <a href="mailto:dantepellico@gmail.com">dantepellico@gmail.com</a></p>
+          <p>Phone: (705) 441-3654</p>
+          <p>Location: Toronto, Canada</p>
+          <div className="social-links">
+            <a href="https://github.com/xpoobx" target="_blank" rel="noreferrer">GitHub</a>
+          </div>
+        </div>
+
+        <form action="/" className="contact-form">
+          <input type="text" placeholder="First Name" required />
+          <input type="text" placeholder="Last Name" required />
+          <input type="tel" placeholder="Contact Number" />
+          <input type="email" placeholder="Email Address" required />
+          <textarea placeholder="Message" required></textarea>
+          <button type="submit">Send</button>
+        </form>
+      </div>
+    </div>
+  );
 }
 
 function App() {
