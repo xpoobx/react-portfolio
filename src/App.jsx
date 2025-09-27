@@ -23,18 +23,45 @@ return (
 }
 
 function Projects() {
-return (
-<div className="projects">
-<h1>Projects</h1>
-{[1, 2, 3].map((p) => (
-<div key={p} className="project-card">
-<img src={`/project${p}.jpg`} alt={`Project ${p}`} />
-<h2>Project {p}</h2>
-<p>tempE{p}.</p>
-</div>
-))}
-</div>
-);
+  const projects = [
+    {
+      id: 1,
+      title: "Portfolio Website",
+      description: "A personal portfolio built with React and deployed on Netlify.",
+      link: "https://ephemeral-bublanina-a844e6.netlify.app/",
+      image: "/portfolio.png"
+    },
+    {
+      id: 2,
+      title: "Restaurant Website",
+      description: "An HTML mock restaurant site",
+      link: "https://xpoobx.github.io/dante5/",
+      image: "/restaurant.png"
+    },
+    {
+      id: 3,
+      title: "Untitled Video Game",
+      description: "A game I'm working on for fun that uses object-oriented coding. I am a programmer and the lead art director for the project.",
+      image: "/gameplaceholder.png"
+    }
+  ];
+
+  return (
+    <div className="projects">
+      <h1>My Projects</h1>
+      <div className="project-list">
+        {projects.map((project) => (
+          <div className="project-card" key={project.id}>
+            <h2>{project.title}</h2>
+            <p>{project.description}</p>
+            <a href={project.link} target="_blank" rel="noreferrer">
+              View Project
+            </a>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
 }
 
 function Education() {
