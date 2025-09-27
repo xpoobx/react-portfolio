@@ -46,12 +46,13 @@ function Projects() {
     }
   ];
 
-  return (
+   return (
     <div className="projects">
       <h1>My Projects</h1>
       <div className="project-list">
         {projects.map((project) => (
           <div className="project-card" key={project.id}>
+            <img src={project.image} alt={project.title} className="project-img" />
             <h2>{project.title}</h2>
             <p>{project.description}</p>
             <a href={project.link} target="_blank" rel="noreferrer">
