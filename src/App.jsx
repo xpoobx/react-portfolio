@@ -30,7 +30,7 @@ return (
 <div key={p} className="project-card">
 <img src={`/project${p}.jpg`} alt={`Project ${p}`} />
 <h2>Project {p}</h2>
-<p>temp{p}.</p>
+<p>tempE{p}.</p>
 </div>
 ))}
 </div>
@@ -42,8 +42,8 @@ return (
 <div className="education">
 <h1>Education</h1>
 <ul>
-<li>B.Sc. in Computer Science - 2024</li>
-<li>Web Development Diploma - 2022</li>
+<li>Secondary School Diploma - 2022</li>
+<li>Software Engineering Technology Advanced Diploma - 2027</li>
 </ul>
 </div>
 );
@@ -54,9 +54,9 @@ return (
 <div className="services">
 <h1>Services</h1>
 <ul>
-<li>1</li>
-<li>2</li>
-<li>3</li>
+<li>Programming</li>
+<li>Art Design</li>
+<li>Troubleshooting</li>
 </ul>
 </div>
 );
