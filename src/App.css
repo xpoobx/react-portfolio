@@ -56,6 +56,23 @@ footer
   margin-bottom: 1rem
 }
 
+/* Home Logo */
+.home-logo {
+  max-width: 500px; 
+  height: auto;
+  margin-bottom: 1.5rem;
+}
+
+/* About portrait */
+.about img {
+  display: block;
+  margin: 0 auto 1.5rem;
+  max-width: 250px;       
+  height: auto;
+  border-radius: 8px; 
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1); 
+}
+
 /* Projects grid */
 .projects {
   display: grid;
@@ -70,6 +87,32 @@ footer
   width: 250px;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
   text-align: center;
+}
+
+/* Services grid */
+.service-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  list-style: none;
+  padding: 0;
+  margin: 1.5rem 0 0;
+}
+
+.service-card {
+  background: #f4f4f4;
+  padding: 1rem;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.service-img {
+  width: 100%;
+  max-width: 180px;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 1rem;
 }
 
 .project-img {

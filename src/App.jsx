@@ -2,21 +2,24 @@ import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import "./App.css";
 
 function Home() {
-return (
-<div className="home">
-<h1>Temp Text</h1>
-<p>Mission Statement:</p>
-<Link to="/about" className="btn">About Me</Link>
-</div>
-);
+  return (
+    <div className="home">
+      <img src="/logo.png" alt="Logo" className="home-logo" />
+      <h1>Welcome!</h1>
+      <p>Im looking to expand my skills in programming and further explore my love of computers.</p>
+      <Link to="/about" className="btn">Learn About Me</Link>
+    </div>
+  );
 }
 
 function About() {
 return (
 <div className="about">
 <h1>About Me</h1>
-<img src="/me.jpg" alt="My portrait" />
-<p>Intro Text</p>
+<img src="/portrait.png" alt="My portrait" />
+<p>Hello, my name is Dante, and I am passionate about Software Engineering and Web Design. I started the Software Engineering Technology course 
+    at Centennial College last year, and am currently in my 3rd semester. I am currently really excited to further hone my skills in coding as 
+    I test my skills on outside projects as well as in the classroom.</p>
 <a href="/resume.pdf" target="_blank" rel="noreferrer">Resume</a>
 </div>
 );
@@ -27,14 +30,14 @@ function Projects() {
     {
       id: 1,
       title: "Portfolio Website",
-      description: "A personal portfolio built with React and deployed on Netlify.",
+      description: "A personal portfolio built with React and deployed on Netlify. Programmed by me.",
       link: "https://ephemeral-bublanina-a844e6.netlify.app/",
       image: "/portfolio.png"
     },
     {
       id: 2,
       title: "Restaurant Website",
-      description: "An HTML mock restaurant site",
+      description: "An HTML mock restaurant site that I programmed myself",
       link: "https://xpoobx.github.io/dante5/",
       image: "/restaurant.png"
     },
@@ -78,16 +81,41 @@ return (
 }
 
 function Services() {
-return (
-<div className="services">
-<h1>Services</h1>
-<ul>
-<li>Programming</li>
-<li>Art Design</li>
-<li>Troubleshooting</li>
-</ul>
-</div>
-);
+  const services = [
+    {
+      id: 1,
+      title: "Programming",
+      image: "/service-programming.png"
+    },
+    {
+      id: 2,
+      title: "Art Design",
+      image: "/service-art.png"
+    },
+    {
+      id: 3,
+      title: "Troubleshooting",
+      image: "/service-troubleshooting.png"
+    }
+  ];
+
+  return (
+    <div className="services">
+      <h1>Services</h1>
+      <ul className="service-list">
+        {services.map((service) => (
+          <li className="service-card" key={service.id}>
+            <img
+              src={service.image}
+              alt={service.title}
+              className="service-img"
+            />
+            <h2>{service.title}</h2>
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
 }
 
 
@@ -124,7 +152,7 @@ return (
 <Router>
 <div className="app">
 <nav>
-<div className="logo">YN</div>
+<div className="logo">Dante Pellico</div>
 <span className="site-title">My Portfolio</span>
 <div className="nav-links">
 <Link to="/">Home</Link>
